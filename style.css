@@ -30,6 +30,13 @@
   background-color: #19327f;
 }
 
+.imgMenor{
+  width: 150px;
+  height: 100px;
+  border: solid 2px #17e5f2;
+  border-radius: 20px;
+  }
+
 .img1{
 width: 250px;
 height: 150px;
@@ -155,7 +162,7 @@ background-size: 100%;
 
 .grid-item1{
 margin: 2px;
-grid-row: span 12;
+grid-row: span 10;
 background-color: #092857;
   text-align: center;
   padding: 5px 10px 5px 10px;
@@ -232,7 +239,13 @@ background-size: 100%;
   padding: 5px 10px 5px 10px;
   height: 350px;
 }
-
+.grid-item7{
+xmargin: 2px;
+grid-column: span 3;
+background-size: 100%;
+height: 350px;
+text-align: center;
+}
 .imglupa{
     height: 40px;
 }
@@ -481,3 +494,41 @@ border-radius: 10px;
 }
 /* BORDA GRADIENTE */
 
+
+/* teste */
+.abas {
+  width: 100%;
+}
+
+.botoes {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.botao {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.botao.ativo {
+  background-color: #031833;
+  color: #fff;
+}
+
+.conteudo {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.aba {
+  display: none;
+}
+
+.aba.ativo {
+  display: block;
+}
+/* teste */
