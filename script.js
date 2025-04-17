@@ -35,7 +35,7 @@ var RecompensaDaMisaoDiaria = 0;
 var RecompensaDiaria = 0;
 var AumentoDoNivelDaMana = 20;
 
-var SomaDoIndicadorDoNivel = 2;
+var SomaDoIndicadorDoNivel = 6;
 var SomaDaPocaoDeRecuperacao = 0;
 var SomaDaPocaoDeVida = 0;
 var SomaDoNivel = 0;
@@ -86,7 +86,7 @@ var ArrancadaNivel2 = 0;
 var SombraIgris = 0;
 var SombraMago = 0;
 
-/*Início da função minerar cristais 123*/
+/*Início da função minerar cristais*/
 function funcaominerarcristal() {
   /* Início apagar as mensagem de RETORNO */
   document.getElementById("idQuadroDeRetornoKandiaru").innerHTML =
@@ -105,11 +105,12 @@ function funcaominerarcristal() {
   document.getElementById("idminerarcristal").innerHTML = "";
    document.getElementById("idTituloAlerta").innerHTML = "";
   /*Fim apagar as mensagem de RETORNO*/
+
   if (fadiga < 100) {
     document.getElementById("idatributopercepcao").innerHTML = "";
     document.getElementById("idvendercristal").innerHTML = "";
 
-    SomaDaPercepcao = percepcao - 9;
+    SomaDaPercepcao = percepcao - 9; 
     if (SomaDaPercepcao > 10) {
       SomaDaPercepcao = 10;
     }
@@ -237,6 +238,159 @@ function funcaominerarcristal() {
 }
 /* Fim da função minerar cristais */
 
+/* Início da função minerar cristais ATÉ A FADIGA SER 100*/
+function funcaominerarcristalAteAfadigaSer100() {
+
+  /* Início apagar as mensagem de RETORNO */
+  document.getElementById("idQuadroDeRetornoKandiaru").innerHTML =
+    "Você quer desafiar o Kandiaru?";
+  document.getElementById("idQuadroDeRetornoGoblin").innerHTML =
+    "Você quer desafiar o Goblin?";
+  document.getElementById("idRetornoMissaoDiaria").innerHTML = "";
+  document.getElementById("idatributopercepcao").innerHTML = "";
+  document.getElementById("idRetornoCompraPocaoRecuperacao").innerHTML = "";
+  document.getElementById("idRetornoCompraPocaoVida").innerHTML = "";
+  document.getElementById("idRetornoCompraPocaoMana").innerHTML = "";
+  document.getElementById("idRetornoCompraEspadaComum").innerHTML = "";
+  document.getElementById("idRetornoCompraEspada").innerHTML = "";
+  document.getElementById("idvendercristal").innerHTML = "";
+  document.getElementById("idvenderpedra").innerHTML = "";
+  document.getElementById("idminerarcristal").innerHTML = "";
+   document.getElementById("idTituloAlerta").innerHTML = "";
+  /*Fim apagar as mensagem de RETORNO*/
+
+  while (fadiga < 100) {
+    document.getElementById("idatributopercepcao").innerHTML = "";
+    document.getElementById("idvendercristal").innerHTML = "";
+
+    SomaDaPercepcao = percepcao - 9; 
+    if (SomaDaPercepcao > 10) {
+      SomaDaPercepcao = 10;
+    }
+
+    fadiga = fadiga + 11 - SomaDaPercepcao;
+    cristal = cristal + SomaDaPercepcao;
+    SomaDosCristais = SomaDosCristais + SomaDaPercepcao;
+
+    if (fadiga > 100) {
+      fadiga = 100;
+    }
+
+    if (fadiga < 1) {
+      fadiga = 0;
+    }
+
+    if (SomaDosCristais > 999 && RecompensaDoTitulo50Cristais === 0) {
+      RecompensaDoTitulo50Cristais = 1;
+      atributo = atributo + 1;
+      alert(
+        "Parabéns você trocou de Título e ganhou 1 Ponto de atributo. Novo título: Entusiasta da Mineração",
+      );
+      document.getElementById("idtitulo").innerHTML =
+        "Título: Entusiasta da Mineração";
+
+        document.getElementById("idTituloAlerta").innerHTML =
+        "⚠️";
+
+      document.getElementById("idCheckEntusiasta").innerHTML =
+        "✅ Título Entusiata da Mineração: Obtida ao minerar 1000 Cristais de mana.";
+
+      document.getElementById("idatributo").innerHTML =
+        "Disponíveis: " + atributo;
+    }
+
+    if (SomaDosCristais > 3999 && RecompensaDoTitulo999Cristais === 0) {
+      RecompensaDoTitulo999Cristais = 1;
+      atributo = atributo + 1;
+      alert(
+        "Parabéns você trocou de Título e ganhou 1 Ponto de atributo. Novo título: Lorde da Mineração",
+      );
+      document.getElementById("idtitulo").innerHTML =
+        "Título: Lorde da Mineração";
+
+         document.getElementById("idTituloAlerta").innerHTML =
+        "⚠️";
+
+      document.getElementById("idCheckLorde").innerHTML =
+        "✅ Título Lorde da Mineração: Obtida ao minerar 4000 Cristais de mana.";
+
+      document.getElementById("idatributo").innerHTML =
+        "Disponíveis: " + atributo;
+    }
+
+    document.getElementById("idminerarcristal").innerHTML =
+      "Cristais minerado: " + SomaDaPercepcao;
+
+    if (dia === 1) {
+      document.getElementById("idMissaoDiariaCristais").innerHTML =
+        "Tenha 10 Cristais de Mana minerados: " + SomaDosCristais + "/10";
+    }
+
+    if (dia === 2) {
+      document.getElementById("idMissaoDiariaCristais").innerHTML =
+        "Tenha 70 Cristais de Mana minerados: " + SomaDosCristais + "/70";
+    }
+
+    if (dia === 3) {
+      document.getElementById("idMissaoDiariaCristais").innerHTML =
+        "Tenha 400 Cristais de Mana minerados: " + SomaDosCristais + "/400";
+    }
+
+    if (dia === 4) {
+      document.getElementById("idMissaoDiariaCristais").innerHTML =
+        "Tenha 700 Cristais de Mana minerados: " + SomaDosCristais + "/700";
+    }
+
+    if (dia === 5) {
+      document.getElementById("idMissaoDiariaCristais").innerHTML =
+        "Tenha 1500 Cristais de Mana minerados: " + SomaDosCristais + "/1500";
+    }
+
+    if (dia === 6) {
+      document.getElementById("idMissaoDiariaCristais").innerHTML =
+        "Tenha 3500 Cristais de Mana minerados: " + SomaDosCristais + "/3500";
+    }
+
+    if (dia === 7) {
+      document.getElementById("idMissaoDiariaCristais").innerHTML =
+        "Tenha 5000 Cristais de Mana minerados: " + SomaDosCristais + "/5000";
+    }
+
+    if (dia === 8) {
+      document.getElementById("idMissaoDiariaCristais").innerHTML =
+        "Tenha 7000 Cristais de Mana minerados: " + SomaDosCristais + "/7000";
+    }
+
+    if (dia === 9) {
+      document.getElementById("idMissaoDiariaCristais").innerHTML =
+        "Tenha 10.000 Cristais de Mana minerados: " +
+        SomaDosCristais +
+        "/10000";
+    }
+
+    if (dia === 10) {
+      document.getElementById("idMissaoDiariaCristais").innerHTML =
+        "Tenha 14.000 Cristais de Mana minerados: " +
+        SomaDosCristais +
+        "/14000";
+    }
+
+    document.getElementById("idcristal").innerHTML =
+      "Cristais de Mana: " + cristal;
+
+    document.getElementById("idcristalinventario").innerHTML =
+      "⚠️ Cristais de Mana: " + cristal;
+
+    document.getElementById("idfadiga").innerHTML = "🪫Fadiga: " + fadiga + "%";
+
+    progresso.setAttribute("style", "width: " + fadiga + "%");
+  } if(fadiga > 99) {
+    document.getElementById("idminerarcristal").innerHTML =
+      "Sua Fadiga está em 100% [Compre poção de fadiga na loja de itens ou realize a missão diária para regarregar]";
+  }
+  
+}
+/* Fim da função minerar cristais ATÉ A FADIGA SER 100*/
 
 /*Início da fução atribuir pontos na Força*/
 function funcaoatribuirforca() {
@@ -265,7 +419,7 @@ function funcaoatribuirforca() {
       alert("Level Up");
 
       EqualizadoDoNivel = EqualizadoDoNivel + 1;
-      SomaDoIndicadorDoNivel = SomaDoIndicadorDoNivel + 3;
+      SomaDoIndicadorDoNivel = SomaDoIndicadorDoNivel + 6;
     }
     /*Fim da função subir de nível*/
   } else {
@@ -504,7 +658,7 @@ function funcaoVenderEspadaComum() {
 }
 /*Fim da função vender ADAGA*/
 
-/*início da função Treinamento de força*/
+/*início da função Treinamento diário*/
 function misaoDiaria() {
   if (treino < 100 && RecompensaDaMisaoDiaria === 0 && fadiga < 100) {
     SomaDaForca = forca - 8;
@@ -530,6 +684,13 @@ function misaoDiaria() {
     document.getElementById("idfadiga").innerHTML = "🪫Fadiga: " + fadiga + "%";
 
     progresso.setAttribute("style", "width: " + fadiga + "%");
+
+
+    forca = forca + 1;
+    document.getElementById("idforca").innerHTML = "💪 Força: " + forca;
+
+    alert("Receba a recompensa pelo Treino Diário [1 Ponto de atributo Força]",);
+
   }
 }
 /*Fim da função Treinamento de força*/
@@ -1221,7 +1382,7 @@ function LutaContraGoblinBotao() {
       alert("Level Up");
 
       EqualizadoDoNivel = EqualizadoDoNivel + 1;
-      SomaDoIndicadorDoNivel = SomaDoIndicadorDoNivel + 3;
+      SomaDoIndicadorDoNivel = SomaDoIndicadorDoNivel + 6;
     }
     /* Fim da função subir de nível */
   } else {
@@ -1318,7 +1479,7 @@ document.getElementById("idCheckSaudelongevidade").innerHTML =
       alert("Level Up");
 
       EqualizadoDoNivel = EqualizadoDoNivel + 1;
-      SomaDoIndicadorDoNivel = SomaDoIndicadorDoNivel + 3;
+      SomaDoIndicadorDoNivel = SomaDoIndicadorDoNivel + 6;
     }
     /*Fim da função subir de nível*/
   } else {
@@ -1472,7 +1633,7 @@ function funcaoatribuiragilidade() {
       alert("Level Up");
 
       EqualizadoDoNivel = EqualizadoDoNivel + 1;
-      SomaDoIndicadorDoNivel = SomaDoIndicadorDoNivel + 3;
+      SomaDoIndicadorDoNivel = SomaDoIndicadorDoNivel + 6;
     }
     /*Fim da função subir de nível*/
   } else {
@@ -1506,7 +1667,7 @@ function funcaoatribuirinteligencia() {
       alert("Level Up");
 
       EqualizadoDoNivel = EqualizadoDoNivel + 1;
-      SomaDoIndicadorDoNivel = SomaDoIndicadorDoNivel + 3;
+      SomaDoIndicadorDoNivel = SomaDoIndicadorDoNivel + 6;
     }
     /*Fim da função subir de nível*/
   } else {
@@ -1718,7 +1879,7 @@ function LutaContraLycanBotao() {
       alert("Level Up");
 
       EqualizadoDoNivel = EqualizadoDoNivel + 1;
-      SomaDoIndicadorDoNivel = SomaDoIndicadorDoNivel + 3;
+      SomaDoIndicadorDoNivel = SomaDoIndicadorDoNivel + 6;
     }
     /*Fim da função subir de nível*/
 
@@ -1942,7 +2103,7 @@ function LutaContraKasakaBotao() {
       alert("Level Up");
 
       EqualizadoDoNivel = EqualizadoDoNivel + 1;
-      SomaDoIndicadorDoNivel = SomaDoIndicadorDoNivel + 3;
+      SomaDoIndicadorDoNivel = SomaDoIndicadorDoNivel + 6;
     }
     /*Fim da função subir de nível*/
   } else {
