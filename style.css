@@ -1,0 +1,483 @@
+.AtaqueFisico{
+ color: white;
+  background-color: #ec6630; 
+}
+.AtaqueMagico{
+ color: white;
+  background-color: purple; 
+}
+.pedra{
+ color: white;
+  background-color: brown; 
+}
+.inseto{
+ color: black;
+  background-color: yellowgreen; 
+}
+.humanoide{
+  color: white;
+  background-color: deeppink;
+}
+.demonio{
+  color: white;
+  background-color: red;
+}
+.cobra{
+  color: white;
+  background-color: green;
+}
+.temafieldset{
+  background-color: #19327f;
+}
+
+.img1{
+width: 250px;
+height: 150px;
+border: solid 2px #17e5f2;
+border-radius: 20px;
+}
+.pipoca{
+height: 100px;
+border-radius: 10px;
+}
+
+.luta{
+   background-color: #212338;
+  text-align: left;
+}
+.PontosExtras{
+  color: lawngreen;
+}
+.sublinhado{
+  border-radius: 5px;
+border: solid 1px white;
+background-color: #031833;
+padding: 5px 5px 0 5px;
+}
+
+.TestaqueEmVermelho{
+background-color: red;
+}
+.imagemParaItens{
+height: 75px;
+border-radius: 10px;
+}
+.botaoNovo{
+padding: 10px;
+display:inline-block;
+color: white;
+text-decoration: none;
+font-weight: bold;
+background-color: #031833;
+border-radius: 10px;
+border: solid 3px #373960;
+}
+h3{
+  color:white;
+}
+
+  h2{
+    color: white;
+  }
+
+  p{
+    color: white;
+  }
+
+  body{
+background-color: black;
+color: white;
+  }
+
+a{
+padding: 10px;
+display:inline-block;
+color: cyan;
+text-decoration: none;
+font-weight: bold;
+background-color: #212338;
+border-radius: 10px;
+border: solid 3px #373960;
+}
+
+a:hover{
+color: black;
+text-decoration: none;
+background-color: cyan;
+}
+
+legend{
+color: white;
+}
+
+.nota{
+  background-color: #212338;
+}
+ul{
+  color: white;
+  text-align: left;
+  background-color: #212338;
+}
+
+ol{
+  color: white;
+  background-color: green;
+}
+
+details{
+  color: white
+}
+
+  .grid-container{
+    Xbackground-image:  url(https://sm.ign.com/ign_br/screenshot/default/e9aed30acb7f0f9c34fa3b046c29c4181679407529-main_yz78.png);
+display: grid;
+gap: 4px;
+grid-template-columns: 2fr 2fr 2fr;
+background-color: #031833;
+Xborder: solid 4px white;
+}
+
+.grid-item-1{
+grid-column: span 3;
+  background-color: #373960;
+  text-align: center;
+  font-size: 25px;
+}
+
+.grid-item0{
+  background-image:  url(https://staticg.sportskeeda.com/editor/2023/03/17ca6-16794716243600-1920.jpg);
+margin: 2px;
+grid-column: span 3;
+background-repeat: repeat;
+background-size: 100%;
+  height: 350px;
+}
+
+.grid-item1{
+margin: 2px;
+grid-row: span 12;
+background-color: #092857;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  box-shadow: 2px 2px 2px  #17e5f2;
+}
+.grid-item2{
+margin: 2px;
+grid-column: span 2;
+background-color: #092857;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  box-shadow: 2px 2px 2px  #17e5f2;
+}
+.grid-item3{
+margin: 2px;
+background-color: #092857;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  box-shadow: 2px 2px 2px  #17e5f2;
+}
+
+.grid-itemFlutuante{
+  z-index: 2;  /*  Indica a posição do elemento nas camadas de sobreposição */
+position: sticky;
+top: 0;
+
+margin: 2px;
+background-color: #092857;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  box-shadow: 2px 2px 2px  #17e5f2;
+}
+
+
+.grid-item4{
+ 
+  background-image:  url(https://images8.alphacoders.com/113/1139017.jpg);
+xmargin: 2px;
+grid-column: span 3;
+background-repeat: repeat;
+background-size: 100%;
+  height: 350px;
+  Xtext-align: center;
+}
+.grid-item5{
+
+margin: 2px;
+grid-column: span 2;
+background-repeat: repeat;
+background-size: 100%;
+  height: 75px;
+  text-align: center;
+}
+
+.grid-item6{
+  grid-column: span 4;
+margin: 2px;
+background-color: #3f4553;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  box-shadow: 2px 2px 2px  white;
+    height: 350px;
+}
+
+X.grid-item6{
+Xbackground-image:  url(https://a-static.besthdwallpaper.com/programmer-story-wallpaper-1920x600-83914_57.jpg);
+margin: 2px;
+grid-column: span 1;
+background-image:  url(https://wallpapercave.com/wp/wp2200981.jpg);
+Xbackground-image:  url(https://i.pinimg.com/originals/b2/31/f2/b231f21955181bb8025b65c74a395d39.jpg);
+background-repeat: repeat;
+background-size: 100%;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  height: 350px;
+}
+
+.imglupa{
+    height: 40px;
+}
+
+.imgicones{
+height: 30px;
+width: 30px;
+transform: rotate(50deg);
+margin: 5px;
+
+ }
+
+ 
+ .html{
+color: #ec6630;
+font-style: italic;
+font-family:cursive;
+}
+.css{
+color: #0096e6;
+font-style: italic;
+font-family:cursive;
+}
+.java{
+color: #eeaf4b; 
+font-style: italic;
+font-family:cursive;
+}
+button{
+  border-radius: 10px;
+}
+
+
+
+
+
+.cards-container{
+  width: 100%;
+  border-radius: 10px;
+  xmargin: 20px auto;
+  xpadding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px
+}
+
+
+.flip-card{
+width: 250px;
+height: 150px;
+border-radius: 10px;
+perspective: 1000px;
+background-color: transparent;
+}
+
+.flip-card-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+    xtransition: 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner{
+  transform: rotateY(180deg);
+}
+
+.flip-card:hover {
+  cursor: pointer;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front,
+.flip-card-back{
+  display: grid;
+  place-items: center;
+}
+.flip-card-front{
+  display: grid;
+  place-items: center; 
+  border: 1px solid rgba (151, 149, 149, 0.466);
+  border-radius: 10px;
+}
+
+.flip-card-back{
+  background-color: #212338;
+  transform: rotateY(180deg);
+  box-shadow: 5px 5px 5px lightgray;
+  border-radius: 10px;
+}
+
+.flip-card-front img{
+  width: 90%;
+  background-size: cover;
+}
+
+.flip-card-back h3{
+  color: #f1c40f;
+}
+
+
+
+.barra {
+  width: 300px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: greenyellow;
+}
+.barra div {
+  height: 100%;
+  border-radius: 10px;
+  background-color: red;
+  transition: all 300ms;
+}
+
+
+.barraVida {
+  width: 300px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: red;
+}
+.barraVida div {
+  height: 100%;
+  border-radius: 10px;
+  background-color: greenyellow;
+  transition: all 300ms;
+}
+
+.blob {
+padding: 10px;
+display:inline-block;
+color: white;
+text-decoration: none;
+font-weight: bold;
+background-color: #031833;
+border-radius: 10px;
+border: solid 3px #373960;
+
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	transform: scale(1);
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+
+/*  INÍCIO DO CARROSSEL */
+.galery {
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+}
+.galery .fotos {
+width: 500%;
+animation-name: animacao;
+animation-duration: 20s;
+animation-iteration-count: infinite;
+}
+.galery .fotos img {
+width: 19.9%;
+xwidth: 19.8%;
+  height: 360px;
+border: solid 1px black;
+}
+@keyframes animacao {
+  0% { margin-left: 0;}
+  20% { margin-left: 0;}
+  25% { margin-left: -100%;}
+  45% { margin-left: -100%;}
+  50% { margin-left: -200%;}
+  70% { margin-left: -200%;}
+  75% { margin-left: -300%;}
+  95% { margin-left: -300%;}
+  100% { margin-left: -400%;}
+}
+/*  FIM DO CARROSSEL */
+
+
+/* BORDA GRADIENTE */
+.caixa{
+  position: relative;
+color: #FFFFFF;
+background: #0079BF;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+margin-left: 45%; /* é aqui que se ajusta o alinhamento da imagem no span */
+width: 50px;
+height: 50px;
+border-radius: 10px;
+}
+
+.caixa::before, .caixa::after {
+  content: '';
+  position: absolute;
+  width: calc(100% + 30px);
+  height: calc(100% + 30px);
+  background: linear-gradient(45deg,#ffff00, #00ff00, #0099ff, #001aff,#a200ff,#ff0055,#ff0000,
+  #ffff00, #00ff00, #0099ff, #001aff, #0099ff);
+  z-index: 0;
+  background-size: 300%;
+  border-radius: 10px;
+  animation: AnimarBorda 8s linear infinite;
+
+
+}
+
+.caixa::after{
+  filter: blur(50px);
+}
+
+@keyframes AnimarBorda{
+  0%{
+    background-position: 0;
+  }
+  100%{
+    background-position: 300%;
+  }
+}
+/* BORDA GRADIENTE */
+
