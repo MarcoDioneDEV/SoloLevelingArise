@@ -447,7 +447,7 @@ document.getElementById("idRetornoAssassinaNoStatus").innerHTML = "";
       alert("Level Up");
 
       EqualizadoDoNivel = EqualizadoDoNivel + 1;
-      SomaDoIndicadorDoNivel = SomaDoIndicadorDoNivel + 3;
+      SomaDoIndicadorDoNivel = SomaDoIndicadorDoNivel + 6;
     }
     /* Fim da função subir de nível */
   } else {
@@ -700,7 +700,7 @@ function LutaContraAranhaBotao() {
    EqualizadoDoNivel =
     EqualizadoDoNivel + 1;
    SomaDoIndicadorDoNivel =
-    SomaDoIndicadorDoNivel + 3;
+    SomaDoIndicadorDoNivel + 6;
   }
   /*Fim da função subir de nível*/
 
@@ -971,7 +971,7 @@ document.getElementById("idRetornoArrancadaNoStatus").innerHTML = "";
    EqualizadoDoNivel =
     EqualizadoDoNivel + 1;
    SomaDoIndicadorDoNivel =
-    SomaDoIndicadorDoNivel + 3;
+    SomaDoIndicadorDoNivel + 6;
   }
   /*Fim da função subir de nível*/
 
@@ -1306,7 +1306,7 @@ document.getElementById(
    EqualizadoDoNivel =
     EqualizadoDoNivel + 1;
    SomaDoIndicadorDoNivel =
-    SomaDoIndicadorDoNivel + 3;
+    SomaDoIndicadorDoNivel + 6;
   }
   /*Fim da função subir de nível*/
 
@@ -1589,7 +1589,7 @@ Kang = 1;
    EqualizadoDoNivel =
     EqualizadoDoNivel + 1;
    SomaDoIndicadorDoNivel =
-    SomaDoIndicadorDoNivel + 3;
+    SomaDoIndicadorDoNivel + 6;
   }
   /*Fim da função subir de nível*/
 
@@ -2089,7 +2089,7 @@ document.getElementById("idCheckAdversidade").innerHTML =
    EqualizadoDoNivel =
     EqualizadoDoNivel + 1;
    SomaDoIndicadorDoNivel =
-    SomaDoIndicadorDoNivel + 3;
+    SomaDoIndicadorDoNivel + 6;
   }
   /*Fim da função subir de nível*/
 
