@@ -167,7 +167,7 @@ function funcaoatribuirpercepcao() {
       alert("Level Up");
 
       EqualizadoDoNivel = EqualizadoDoNivel + 1;
-      SomaDoIndicadorDoNivel = SomaDoIndicadorDoNivel + 3;
+      SomaDoIndicadorDoNivel = SomaDoIndicadorDoNivel + 6;
     }
     /* Fim da função subir de nível */
   } else {
@@ -233,3 +233,21 @@ function FuncaoExtracao2() {
   
 }
 /* Fim da habilidade Extração de Sombras MAGOS */
+
+/*teste*/
+function abrirAba(id) {
+  const abas = document.querySelectorAll('.aba');
+  const botoes = document.querySelectorAll('.botao');
+
+  abas.forEach((aba) => {
+    aba.classList.remove('ativo');
+  });
+
+  botoes.forEach((botao) => {
+    botao.classList.remove('ativo');
+  });
+
+  document.getElementById(`aba${id}`).classList.add('ativo');
+  botoes[id - 1].classList.add('ativo');
+}
+/*teste*/
