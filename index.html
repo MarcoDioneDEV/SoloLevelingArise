@@ -62,8 +62,7 @@
     <h3 id="idDiaMissaoDiaria" class="sublinhado">Objetivo do dia 1</h3>
 
     <h4 id="idMissaoDiariaCristais">
-      Tenha 10 Cristais de Mana minerados 0/10
-    </h4>
+      Tenha 10 Cristais de Mana minerados 0/10<br><br><em style="color: white; background-color: black;">Minere Cristais de Mana na "Dungeon de mineração: Cristais de Mana"!</em></h4>
     <h4 id="idRetornoMissaoDiariaTreino"></h4>
     <h4 id="idRetornoMissaoDiariaPocaoDeRecuperacao"></h4>
     <h4 id="idRetornoMissaoDiariaPocaoDeVida"></h4>
@@ -103,20 +102,20 @@
 <div class="abas">
   <div class="botoes">
     <button class="botao ativo" onclick="abrirAba(1)">Treino</button>
-    <button class="botao" onclick="abrirAba(2)">Atributos</button>
-    <button class="botao" onclick="abrirAba(3)">Loja</button>
-    <button class="botao" onclick="abrirAba(4)">Inventário</button>
-    <button class="botao" onclick="abrirAba(5)">Habilidades</button>
+    <button class="botao" onclick="abrirAba(2)" id="idAlertaNoMenuAtributos">Atributos</button>
+    <button class="botao" onclick="abrirAba(3)" id="idAlertaNoMenuLoja">Loja</button>
+    <button class="botao" onclick="abrirAba(4)" id="idAlertaNoMenuInventario">Inventário</button>
+    <button class="botao" onclick="abrirAba(5)" id="idAlertaNoMenuHabilidade">Habilidades</button>
   </div>
   <div class="conteudo">
     <div class="aba ativo" id="aba1">
  <!--Início do Treino diário-->
-      <h2>Treino diário</h2>
+      <h2>Treinamento de Força</h2>
 
       <h3 class="sublinhado">Objetivo do dia</h3>
 
           <h4>
-            Treinamento de força chegou: 100 flexões, 100 abdominais, 100
+            Treino diário chegou: 100 flexões, 100 abdominais, 100
             agachamentos e 10km de corrida.
           </h4>
 
@@ -151,7 +150,7 @@
 
              <!--Início dos Pontos de atributos-->
              <h1>Pontos de atributos</h1>
-             <fieldset class="temafieldset">
+             
                <h3 id="idatributo" class="sublinhado">Disponíveis: 0</h3>
                <br />
                <button class="botaoNovo" onclick="funcaoatribuirforca()">
@@ -212,376 +211,253 @@
       
 
                <h4 id="idatributopercepcao"></h4>
-             </fieldset>
+             
              <!--Fim dos Pontos de atributos-->
     </div>
     <div class="aba" id="aba3">
       
-   <!-- Início da Loja de itens-->
+   <!-- INÍCIO DA LOJA DE ITENS-->
    <h1>Loja de ítens</h1>
-
-   <fieldset class="temafieldset">
      <h3 id="idouro" class="sublinhado">Ouro: 0</h3>
+<h4>Clique nas imagens para realizar uma compra. Venda intens na aba Inventário para conseguir Ouro.</h4>
 
-     <details>
-       <summary class="sumario">Poção de Fadiga</summary>
-       <br />
-       <img
-         class="imgMenor"
-         src="https://noticias.maisesports.com.br/wp-content/uploads/2022/07/pocao-vida-lol.jpg"
-       />
-       <br />
+<!-- Início da Poção de Fadiga-->
+ <br>
+<img class="imgMenor" onclick="funcaoComprarPocaoRecuperacao()" src="https://noticias.maisesports.com.br/wp-content/uploads/2022/07/pocao-vida-lol.jpg"/>
+<h4 id="idRetornoCompraPocaoRecuperacao"></h4>
+<details>
+<summary class="sumario">Poção de Fadiga</summary>
+<h4 class="sublinhado">
+<br />[Categoria: Assistência] <br /><br />Você pode recuperar 10% da sua fadiga. 
+<br><br> Custo: 1 moeda de ouro<br /><br />
+</h4>      
+ </details>
+     <br>
+<!-- Fim da Poção de Fadiga-->
 
-       <h4 class="sublinhado">
-         <br />[Categoria: Assistência] <br /><br />Você pode recuperar 10%
-         da sua fadiga - Custo: 1 moeda de ouro<br /><br />
-       </h4>
-
-       <button class="botaoNovo" onclick="funcaoComprarPocaoRecuperacao()">
-         Comprar e usar
-       </button>
-       <br />
-       <h4 id="idRetornoCompraPocaoRecuperacao"></h4>
-     </details>
-     <br />
-
+<!-- Início da Poção de Vida-->
+<img class="imgMenor" onclick="funcaoComprarPocaoVida()" src="https://cdna.artstation.com/p/assets/images/images/074/984/082/large/aiken-sin-.jpg?1713444890"/>
+<br />
+<h4 id="idRetornoCompraPocaoVida"></h4>
      <details>
        <summary class="sumario">Poção de vida</summary>
-       <br />
-       <img
-         class="imgMenor"
-         src="https://cdna.artstation.com/p/assets/images/images/074/984/082/large/aiken-sin-.jpg?1713444890"
-       />
-       <br />
-
+       
        <h4 class="sublinhado">
          <br />[Categoria: Assistência] <br /><br />Você pode recuperar 10%
-         da sua vida - Custo: 5 moedas de ouro<br /><br />
-       </h4>
-
-       <button class="botaoNovo" onclick="funcaoComprarPocaoVida()">
-         Comprar
-       </button>
-       <h4 id="idRetornoCompraPocaoVida"></h4>
+         da sua vida.
+         <br><br> Custo: 5 moedas de ouro<br /><br />
+       </h4>    
      </details>
      <br />
+<!-- Fim da Poção de Vida-->
 
+<!-- Início da Poção de Mana-->
+<img class="imgMenor" onclick="funcaoComprarPocaoMana()" src="https://img.freepik.com/fotos-premium/pocao-mistica-alquimica-magica-roxa-de-perto_931559-1912.jpg"/>
+<br>
+<h4 id="idRetornoCompraPocaoMana"></h4>
      <details>
        <summary class="sumario">Poção de Mana</summary>
-       <br />
-       <img
-         class="imgMenor"
-         src="https://img.freepik.com/fotos-premium/pocao-mistica-alquimica-magica-roxa-de-perto_931559-1912.jpg"
-       />
-       <br />
-
        <h4 class="sublinhado">
-         <br />[Categoria: Assistência] <br /><br />Você pode recuperar 5
-         pontos de Mana - Custo: 10 moedas de ouro<br /><br />
-       </h4>
-
-       <button class="botaoNovo" onclick="funcaoComprarPocaoMana()">
-         Comprar
-       </button>
-       <h4 id="idRetornoCompraPocaoMana"></h4>
+         <br />[Categoria: Assistência] <br /><br />Você pode recuperar 5 pontos de Mana.
+         <br><br>Custo: 10 moedas de ouro<br><br>
+       </h4>   
      </details>
      <br />
+<!-- Fim da Poção de Mana-->
 
+<!-- Início da Adaga-->
+<img class="imgMenor" onclick="funcaoComprarEspadaComum()"
+  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5xqPxyceLu3k418uWHpADOWGnfDJXuV6oQwKxq6FkSMXYwjz0DXIMcCzxgH7kx54G91k&usqp=CAU"/>
+<br>
+<h4 id="idRetornoCompraEspadaComum"></h4>
      <details>
        <summary class="sumario" id="idCheckCompraAdaga">⚠️ Adaga</summary>
-       <br />
-       <img
-         class="imgMenor"
-         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5xqPxyceLu3k418uWHpADOWGnfDJXuV6oQwKxq6FkSMXYwjz0DXIMcCzxgH7kx54G91k&usqp=CAU"
-       />
-       <br />
+       
 
        <h4 class="sublinhado">
          <br />[Categoria: Equipamento] <br /><br />Você pode equipar essa
          Adaga e ganhar mais 5 Pontos de Atributo em Força.
-         <br /><br />Compra: 50 moedas de ouro.<br />Venda: 10 moedas de
-         ouro<br /><br />
-       </h4>
-
-       <button
-         id="idBotaoComprar"
-         class="botaoNovo"
-         onclick="funcaoComprarEspadaComum()"
-       >
-         Comprar e Equipar
-       </button>
-       <button
-         id="idBotaoVender"
-         class="botaoNovo"
-         onclick="funcaoVenderEspadaComum()"
-       >
-         Vender
-       </button>
-       <br />
-       <h4 id="idRetornoCompraEspadaComum"></h4>
+         <br /><br />Compra: 50 moedas de ouro<br /><br />
+       </h4>       
      </details>
      <br />
+<!-- Fim da Adaga-->
 
-     <details>
-       <summary class="sumario" id="idCheckCompraEspada">
-         ⚠️ Espada
-       </summary>
-       <br />
-       <img
-         class="imgMenor"
-         src="https://i0.wp.com/ovicio.com.br/wp-content/uploads/2024/01/20240126-solo-leveling-e4-1024x576.jpg?resize=730%2C411&ssl=1"
-       />
-       <br />
-
+<!-- Início da Espada-->
+<img class="imgMenor" onclick="funcaoComprarEspada()"  src="https://i0.wp.com/ovicio.com.br/wp-content/uploads/2024/01/20240126-solo-leveling-e4-1024x576.jpg?resize=730%2C411&ssl=1"/>
+<br>     
+<h4 id="idRetornoCompraEspada"></h4>
+<details>
+  <summary class="sumario" id="idCheckCompraEspada">⚠️ Espada</summary>
        <h4 class="sublinhado">
          <br />[Categoria: Equipamento] <br /><br />Você pode equipar essa
          Espada e ganhar mais 15 Pontos de Atributo em Força.<br /><br />Compra:
-         100 moedas de ouro<br />Venda: 50 moedas de ouro <br /><br />
+         100 moedas de ouro <br /><br />
        </h4>
-
-       <button
-         id="idBotaoComprarEspada"
-         class="botaoNovo"
-         onclick="funcaoComprarEspada()"
-       >
-         Comprar e Equipar
-       </button>
-       <button
-         id="idBotaoVenderEspada"
-         class="botaoNovo"
-         onclick="funcaoVenderEspada()"
-       >
-         Vender
-       </button>
        <br />
-       <h4 id="idRetornoCompraEspada"></h4>
+      
      </details>
      <br />
+     <!-- Fim da Espada-->
+
      <!-- Início da Assassina de Cavaleiros -->
+     <img  class="imgMenor" onclick="funcaoEquiparAssassinaCavaleiros()" src="https://i.ytimg.com/vi/rTKix8bn3JM/hqdefault.jpg"/>
+   <br>
+   <h4 id="idRetornoEquiparAssassinaCavaleiros"></h4>
      <details>
       <summary class="sumario" id="idItemAssassinaCavaleirosAdquirida">
         ⛔ Assassina de Cavaleiros
       </summary>
-      <br />
-      <img
-        class="imgMenor"
-        src="https://i.ytimg.com/vi/rTKix8bn3JM/hqdefault.jpg"
-      />
-      <br />
-
       <h4 class="sublinhado">
-        <br />[Categoria: Equipamento] <br /><br />Você pode equipar essa
-        Adaga e ganhar 20 Pontos de Atributo em Força, pode ser comprada
-        por 200 moedas de ouro ao derrotar o Igris.<br /><br />
+        <br />[Categoria: Equipamento] <br><br>Você pode equipar essa
+        Adaga e ganhar 20 Pontos de Atributo em Força. 
+        <br><br>
+        Pode ser comprada por 200 moedas de ouro depois que o Igris for derrotado<br /><br />
       </h4>
 
-      <button
-        id="idBotaoEquiparAssassinaCavaleiros"
-        class="botaoNovo"
-        onclick="funcaoEquiparAssassinaCavaleiros()"
-      >
-        Equipar
-      </button>
-
       <br />
-      <h4 id="idRetornoEquiparAssassinaCavaleiros"></h4>
+      
     </details>
     <br />
-  </fieldset>
+ 
 <!-- Fim da Loja de itens-->
-
 
     </div>
     <div class="aba" id="aba4">
-        <!--Início do Inventário-->
+
+        <!--INICIO DO INVENTÁRIO-->
         <h1>Inventário</h1>
-        <fieldset class="temafieldset">
+        
           <h3 class="sublinhado">Itens</h3>
-
+          <h4>Clique nas imagens para interagir.</h4>
+          <!-- Início de vender os cristais de Mana-->
+          <img class="imgMenor" onclick="funcaovendercristal()" src="https://warcraft.wiki.gg/images/thumb/d/d5/Crystallized_mana_at_Zarkhenar.jpg/1200px-Crystallized_mana_at_Zarkhenar.jpg?b7a980"/>
+          <br>
+          <h4 id="idvendercristal"></h4> 
           <details>
-            <summary id="idcristalinventario">Cristais de Mana: 0</summary>
-
-            <br />
-            <img
-              class="imgMenor"
-              src="https://warcraft.wiki.gg/images/thumb/d/d5/Crystallized_mana_at_Zarkhenar.jpg/1200px-Crystallized_mana_at_Zarkhenar.jpg?b7a980"
-            />
+            <summary id="idcristalinventario">Cristais de Mana: 0</summary>            
 
             <h4 class="sublinhado">
-              <br />[Categoria: Pedra] <br /><br />10 Cristais de mana por uma
-              moeda de ouro. <br /><br />
-            </h4>
-            <button class="botaoNovo" onclick="funcaovendercristal()">
-              Vender 10
-            </button>
-            <button class="botaoNovo" onclick="funcaovendercristal100()">
-              Vender 100
-            </button>
-            <h4 id="idvendercristal"></h4>
+              <br />[Categoria: Pedra] <br /><br />10 Cristais de mana por uma moeda de ouro. Os cristais de Mana podem ser minerados na Dangeon "Cristais de Mana".<br /><br />
+Será vendido 10 Cristais por vez, se o inventátio possuir mais de 100 Cristais será vendido 100 por vez <br><br></h4> 
           </details>
-          <br />
+          <br>
+ <!-- Fim de vender os cristais de Mana-->
 
+ <!-- Início de vender as pedras de essencia-->
+ <img class="imgMenor" onclick="funcaovenderpedra()"  src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/02/essence-stone-solo-leveling-1.jpeg"
+/>
+<br>
+<h4 id="idvenderpedra"></h4>
           <details>
-            <summary id="idpedrainventario">⛔ Pedras de Essência: 0</summary>
-
-            <br />
-            <img
-              class="imgMenor"
-              src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/02/essence-stone-solo-leveling-1.jpeg"
-            />
+            <summary id="idpedrainventario">⛔ Pedras de Essência: 0</summary>          
 
             <h4 class="sublinhado">
               <br />[Categoria: Recompensa - Pedra] <br /><br />Uma Pedra de Essência por 10
               moedas de ouro.<br /><br />
-            </h4>
-            <button class="botaoNovo" onclick="funcaovenderpedra()">
-              Vender
-            </button>
-            <h4 id="idvenderpedra"></h4>
-            <br />
+            </h4>         
+            <br>
           </details>
           <br />
+ <!-- Fim de vender as pedras de essencia-->
 
+  <!-- Início de vender as Presa de Lycan-->
+  <img class="imgMenor" onclick="funcaovenderpresa()"  src="https://i.ytimg.com/vi/0WFRZrlhYk4/hqdefault.jpg"/>
+  <br>
+  <h4 id="idvenderpresa"></h4>
           <details>
-            <summary id="idPresainventario">⛔ Presa de Lycan: 0</summary>
-
-            <br />
-            <img
-              class="imgMenor"
-              src="https://i.ytimg.com/vi/0WFRZrlhYk4/hqdefault.jpg"
-            />
+            <summary id="idPresainventario">⛔ Presa de Lycan: 0</summary>           
 
             <h4 class="sublinhado">
               <br />[Categoria: Recompensa - Presas] <br /><br />Uma presa de
               Lycan por 20 moedas de ouro.<br /><br />
-            </h4>
-            <button class="botaoNovo" onclick="funcaovenderpresa()">
-              Vender
-            </button>
-
-            <h4 id="idvenderpresa"></h4>
+            </h4>         
           </details>
           <br />
+  <!-- Fim de vender as Presa de Lycan-->
 
+   <!-- Início da Presa Venenosa de Kasaka-->
+   <img class="imgMenor" onclick="funcaoEquiparKasaka()"  src="https://swordslice.com/cdn/shop/articles/solothumb-17108697477981715149910-0.png?v=1740413431"/>
+   <br>
+   <h4 id="idRetornoEquiparKasaka"></h4>
           <details>
             <summary class="sumario" id="idItemPresaKasakaAdquirida">
               ⛔ Presa Venenosa de Kasaka
             </summary>
-            <br />
-            <img
-              class="imgMenor"
-              src="https://swordslice.com/cdn/shop/articles/solothumb-17108697477981715149910-0.png?v=1740413431"
-            />
-            <br />
+
 
             <h4 class="sublinhado">
               <br />[Categoria: Recompensa - Equipamento] <br /><br />Você pode
               equipar essa Adaga e ganhar 25 Pontos de Atributo em Força. Adquirida ao derrotar o Chefe da Dangeon Kasaka.<br /><br />
             </h4>
-
-            <button
-              id="idBotaoEquiparKasaka"
-              class="botaoNovo"
-              onclick="funcaoEquiparKasaka()"
-            >
-              Equipar
-            </button>
-
-            <br />
-            <h4 id="idRetornoEquiparKasaka"></h4>
+           
           </details>
           <br />
 
           <!-- início da Coleira do Guardião -->
+          <img class="imgMenor" onclick="funcaoEquiparColeira()"  src="https://ovicio.com.br/wp-content/uploads/2025/02/20250204-solo-leveling-1024x576.jpg"
+          />
+           <br>
+           <h4 id="idRetornoEquiparColeira"></h4>
           <details>
-            <summary class="sumario" id="idItemColeiraAdquirida">
-              ⛔ Coleira do Guardião
-            </summary>
-            <br />
-            <img
-              class="imgMenor"
-              src="https://ovicio.com.br/wp-content/uploads/2025/02/20250204-solo-leveling-1024x576.jpg"
-            />
-            <br />
-
+            <summary class="sumario" id="idItemColeiraAdquirida">⛔ Coleira do Guardião</summary>
+           <br>
             <h4 class="sublinhado">
               <br />[Categoria: Recompensa - Equipamento] <br /><br />Você pode
               equipar esse colar e ganhar 20 Pontos de Atributo em Agilidade e
               Percepção. Adquirida ao derrotar Cerberus
               Guardião do Inferno.<br /><br />
             </h4>
-
-            <button
-              id="idBotaoEquiparColeira"
-              class="botaoNovo"
-              onclick="funcaoEquiparColeira()"
-            >
-              Equipar
-            </button>
-
-            <br />
-            <h4 id="idRetornoEquiparColeira"></h4>
           </details>
           <br />
+  <!-- Fim da Coleira do Guardião -->
 
-          <!-- início do Elmo do Cavaleiro Carmesim -->
+<!-- início do Elmo do Cavaleiro Carmesim -->
+<img  class="imgMenor" onclick="funcaoEquiparElmo()" src="https://images6.alphacoders.com/135/thumb-350-1357475.webp"/>
+<br />
+<h4 id="idRetornoEquiparElmo"></h4>
           <details>
             <summary class="sumario" id="idItemElmoAdquirida">
               ⛔ Elmo do Cavaleiro Carmesim
-            </summary>
-            <br />
-            <img
-              class="imgMenor"
-              src="https://images6.alphacoders.com/135/thumb-350-1357475.webp"
-            />
-            <br />
+            </summary>         
 
             <h4 class="sublinhado">
               <br />[Categoria: Recompensa - Equipamento] <br /><br />Você pode
               equipar esse Elmo e ganhar 20 pontos de Atributo em força.
               Adquirido ao derrotar Igris.<br /><br />
             </h4>
-
-            <button
-              id="idBotaoEquiparElmo"
-              class="botaoNovo"
-              onclick="funcaoEquiparElmo()"
-            >
-              Equipar
-            </button>
-
             <br />
-            <h4 id="idRetornoEquiparElmo"></h4>
+             <!-- Fim do Elmo do Cavaleiro Carmesim -->
+
+
           </details>
           <br />
          
 
           <h4></h4>
-        </fieldset>
+       
 
         <!--Fim do Inventário-->
     </div>
     <div class="aba" id="aba5">
      
-        <!--Início das habilidades-->
-        <h2>Habilidades</h2>
-        <fieldset class="temafieldset">
+        <!--INÍCIO DAS HABILIDADES-->
+        <h1>Habilidades</h1>
+        
           <h3 class="sublinhado" id="idContarExperienciaNoQuadroHabilidades">
             Pontos de experiência: 0
           </h3>
-
+          <h4>Clique nas imagens para interagir.</h4>
 
           <!--Início da habilidade Saúde e longevidade-->
+          <img class="imgMenor" onclick="FuncaoSaudeElogenvidade()"   src="https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2024/01/Solo-Leveling-9.webp?resize=1024%2C582"/>
+            <br>
+            <h4 id="idRetornoSaudeElogenvidade"></h4>
           <details>
             <summary class="sumario" id="idCheckSaudelongevidade">
               ⛔ Habilidade: Saúde e longevidade
             </summary>
-            <br />
-            <img
-              class="imgMenor"
-              src="https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2024/01/Solo-Leveling-9.webp?resize=1024%2C582"
-            />
-            <br />
+            
 
             <h4 class="sublinhado">
               <br>[Missão secreta: Coragem dos fracos] <br><br>
@@ -590,35 +466,26 @@
               pequenos ataques. 
               <br><br>
               Use 25 pontos de experiência para subir o nível da Habilidade.
-              <br>
-              <br>
+              <br><br>
             </h4>
-
-            <h4 class="sublinhado" id="SaudeElogenvidadeUpleve"><br>
-  Se a sua vida for maior ou igual a 90% gaste 1 ponto de Manda e ganhe 10% de vida.<br><br> </h4>
-
-            <button class="botaoNovo" onclick="FuncaoSaudeElogenvidade()">
-              Usar Habilidade
-            </button>
+ <h4 class="sublinhado" id="SaudeElogenvidadeUpleve"><br>
+  Se a sua vida for maior ou igual a 90% gaste 1 ponto de Mana e ganhe 10% de vida.<br><br> </h4>
 
 <button class="botaoNovo" onclick="FuncaoSaudeElogenvidadeUplevel()"> Subir de nível </button>
-
-            <h4 id="idRetornoSaudeElogenvidade"></h4>
-          </details>
+ 
+          </details> <br />
           <!-- Fim da habilidade Saúde e longevidade -->
-          <br />
+         
 
           <!-- Início da habilidade Arrancada -->
+          <img class="imgMenor" onclick="FuncaoArrancada()"  src="https://uploads.jovemnerd.com.br/wp-content/uploads/2024/02/solo_leveling_previa_6__cw249jft.jpg"
+        />
+        <br>
+        <h4 id="idRetornoArrancada"></h4>
           <details>
             <summary class="sumario" id="idCheckArrancada">
               ⛔ Habilidade: Arrancada
-            </summary>
-            <br />
-            <img
-              class="imgMenor"
-              src="https://uploads.jovemnerd.com.br/wp-content/uploads/2024/02/solo_leveling_previa_6__cw249jft.jpg"
-            />
-            <br />
+            </summary>            
 
             <h4 class="sublinhado">
               <br />[Aprimoramento físico] <br /><br />
@@ -635,29 +502,22 @@
               <br />
               <br />
             </h4>
-
-            <button class="botaoNovo" onclick="FuncaoArrancada()">
-              Usar Buff
-            </button>
-
 <button class="botaoNovo" onclick="FuncaoArrancadaUplevel()"> Subir de nível </button>
-
-            <h4 id="idRetornoArrancada"></h4>
-          </details>
+ </details><br>
           <!--Fim da habilidade Arrancada-->
-          <br />
+
+          
 
           <!-- Início da habilidade Intenção Assassina -->
+          <img class="imgMenor" onclick="FuncaoAssassina()" src="https://i.ytimg.com/vi/pZbtp3USHYY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCCnNhPgQCHBqI1NvUmj-uTOmFT4A"
+        />
+        <br>
+        <h4 id="idRetornoAssassina"></h4>
           <details>
             <summary class="sumario" id="idCheckAssassina">
               ⛔ Habilidade: Intenção Assassina
             </summary>
-            <br />
-            <img
-              class="imgMenor"
-              src="https://i.ytimg.com/vi/pZbtp3USHYY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCCnNhPgQCHBqI1NvUmj-uTOmFT4A"
-            />
-            <br />
+           
 
             <h4 class="sublinhado">
               <br />[Classe: Assassino] <br /><br />
@@ -665,29 +525,20 @@
               ser usada ao derrotar o Grupo de Caçadores, este buff pode ser
               usado por 4 pontos de Mana. Os buff tem duração de 1 ataque.
               <br />
-              <br />
+              
             </h4>
-
-            <button class="botaoNovo" onclick="FuncaoAssassina()">
-              Usar Buff
-            </button>
-
-            <h4 id="idRetornoAssassina"></h4>
           </details>
           <br />
           <!--Fim da habilidade da Intenção Assassina-->
 
           <!--Início da habilidade Furtividade-->
+          <img  class="imgMenor" onclick="FuncaoFurtividade()" src="https://images.alphacoders.com/109/1093511.png"/>
+            <br />
+            <h4 id="idRetornoFurtividade"></h4>
           <details>
             <summary class="sumario" id="idCheckFurtividade">
               ⛔ Habilidade: Furtividade
-            </summary>
-            <br />
-            <img
-              class="imgMenor"
-              src="https://images.alphacoders.com/109/1093511.png"
-            />
-            <br />
+            </summary>            
 
             <h4 class="sublinhado">
               <br />[Classe: Assassino] <br /><br />
@@ -695,74 +546,16 @@
               pode ser usada ao derrotar o Mr Kang, este buff pode ser usado por
               15 pontos de Mana. Os buff tem duração de 1 ataque.
               <br />
-              <br />
             </h4>
 
-            <button class="botaoNovo" onclick="FuncaoFurtividade()">
-              Usar Buff
-            </button>
-
-            <h4 id="idRetornoFurtividade"></h4>
+            
           </details>
           <br />
           <!--Fim da habilidade da Furtividade-->
 
- <!--Início da habilidade Extração de Sombras-->
-          <details>
-            <summary class="sumario" id="idCheckExtracao">
-              ⛔ Habilidade: Extração de Sombra
-            </summary>
-            <br />
-            <img
-              class="imgMenor"
-              src="https://animeflix.com.br/wp-content/uploads/2025/02/solo-leveling-monarca-das-sombras-696x392.jpg"
-            />
-            <br />
+ 
 
-            <h4 class="sublinhado">
-              <br />[Habilidade exclusiva da classe Monarca das Sombras] <br /><br />
-             Extrai mana de um corpo cuja a vida chegou ao fim e a transforma em  um soldado das Sombras.
-              <br />
-              <br />
-            </h4>
-
-<fieldset class="sublinhado">
- <h3 >[Igris Nível 7]<br>Rank Cavaleiro</h3> 
- <br>
- <img class="img1" src="https://i.ytimg.com/vi/WouuRxJi_tg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCkpfPUlmpzp4lsoZiYBOvidaAT3w"/>
-<br><br>
-  <h3 class="luta">🦵 Agilidade: 100 <br> 💪 Força: 120 <br> 👀 Percepção: 80 <br> 🧠 Inteligência: 60</h3>
-<h3 >Necessário 20 Pontos de Mana</h3>
-<button class="botaoNovo" onclick="FuncaoExtracao1()"> Erga-se </button>
-
-            <h4 id="idRetornoExtracao1"></h4>
-</fieldset>
-
-<fieldset class="sublinhado">
- <h3 >[Magos das Sombras Nível 1]<br> Rank Normal</h3>
- <br>
- <img class="img1" src="https://preview.redd.it/4hwzwdio9tce1.png?auto=webp&s=a2bc4f454e79e7d5c532a4f2fb8c0a3eb7c4cfa6"/>
-<br><br>
-  <h3 class="luta">🦵 Agilidade: 145 <br> 💪 Força: 140 <br> 👀 Percepção: 85 <br> 🧠 Inteligência: 65</h3>
-
- <h3 >Necessário 10 Pontos de Mana</h3>
-<button class="botaoNovo" onclick="FuncaoExtracao2()"> Erga-se </button>
-
-            <h4 id="idRetornoExtracao2"></h4>
-
-            
-        <br />
-</fieldset>
-<br />
-        <iframe width="320" height="200" src="https://www.youtube.com/embed/CRZsOOOvg1I?si=knBLpsxTc8Tw4f-y&autoplay=1&mute=1&loop=1&playlist=CRZsOOOvg1I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<br>
-
-          </details>
-          <br />
-          <!-- Fim da habilidade da Extração de Sombras -->
-
-        </fieldset>
+       
         <br />
         <!--Fim das habilidades-->
     </div>
@@ -878,6 +671,15 @@
         <div class="barraVida">
           <div></div>
         </div>
+        <br />
+        <details>
+          <summary><em class="sumario">Nota</em></summary>
+          <h4>
+            ❤️ Vida: Ao lutar contra inimigos você irá perder vida. Quando sua vida chegar em 0% não será mais possível lutar até a mesma ser recarregada,
+            compre "Poção de Vida" na Loja de Intens.
+          </h4>
+          <br />
+        </details>
       </div>
       <!-- Fim da vida -->
 
@@ -894,8 +696,8 @@
           <h4>
             🪫Fadiga: Ao realizar tarefas no jogo é gerado um cansaço, ao chegar
             em 100% não é possível realizar nenhuma tarefa extra. Para
-            recarregar a Fadiga você pode realizar a Missão diária ou comprar
-            uma Poção de recuperação na Loja de ítens.
+            recarregar a Fadiga você pode realizar a Missão diária [Recuperação Total da Fadiga] ou comprar
+            uma Poção de Fadiga na "Loja de ítens".
           </h4>
           <br />
         </details>
@@ -934,24 +736,18 @@
       <!--Fim dos Atributos-->
 
       <!--Início da Dugeon de Mineração-->
-      <div class="grid-item3">
+      <div class="grid-item2">
         <h1>Cristais de Mana</h1>
 
         <div class="cards-container">
           <div class="card-1 flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img
-                  class="img1"
-                  src="https://t4.ftcdn.net/jpg/08/37/59/97/360_F_837599776_mlGxnGTuzsHYmJGlehz3d3lLiWr50My7.jpg"
-                  alt=""
-                />
+                <img class="img1" src="https://t4.ftcdn.net/jpg/08/37/59/97/360_F_837599776_mlGxnGTuzsHYmJGlehz3d3lLiWr50My7.jpg" alt=""/>
               </div>
               <div class="flip-card-back">
-                <p>
-                  Dungeon de mineração: Você pode minerar os Cristais de Mana e
-                  vende-los na "Loja de itens"
-                </p>
+                <img class="img1" src="https://preview.redd.it/why-didnt-jin-woo-pick-up-mining-jobs-before-his-v0-iyna5cuwmdje1.png?auto=webp&s=ab630ffb709b6da4a9bbeb73e7e5b040ad3d5080"/>
+               
               </div>
             </div>
           </div>
@@ -978,7 +774,7 @@
 
           <h3 id="idcristal">Cristais de Mana: 0</h3>
           <button class="blob" onclick="funcaominerarcristal()"> MINERAR CRISTAIS DE MANA </button>
-          <button class="blob" onclick="funcaominerarcristalAteAfadigaSer100()"> MINERAR 100% DA FADIGA </button>
+          <button class="blob" onclick="funcaominerarcristalAteAfadigaSer100()"> MINERAR ATÉ 100% DA FADIGA </button>
           <h4 id="idminerarcristal"></h4>
           <br /><br />
 
@@ -1005,25 +801,21 @@
       </div>
       <!-- Fim da Dugeon de Mineração -->
 
+      <time id="idDIVEsconderKandiaru">
+
       <!-- INÍCIO da Dangeon Dupla -->
-      <div class="grid-item3">
+      <div class="grid-item3" >
         <h1>Kandiaru</h1>
 
         <div class="cards-container">
           <div class="card-1 flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img
-                  class="img1"
-                  src="https://i.ytimg.com/vi/rsBNBXAQ9Bw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDnk34V2OEmAJ__AN8XFtNM9pc3iA"
-                  alt=""
+<img class="img1" src="https://i.ytimg.com/vi/rsBNBXAQ9Bw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDnk34V2OEmAJ__AN8XFtNM9pc3iA" alt=""
                 />
               </div>
               <div class="flip-card-back">
-                <p>
-                  Tipo: --- <br />
-                  Localização: --- <br />
-                </p>
+ <img class="img1" src="https://i.ytimg.com/vi/X_VIKp0obyA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAqEf63WrLAM4pQ5e88OtH-0FNw3g"/>
               </div>
             </div>
           </div>
@@ -1052,15 +844,13 @@
             <h3 class="sublinhado">Status do Kandiaru</h3>
 
             <fieldset class="luta">
-              <h3 class="luta" id="idVidaKandiaru">❤️ Vida: -100%</h3>
-              <h3 class="luta" id="idFadigaKandiaru">🪫Fadiga : +100%</h3>
+         
+              <h3 class="luta" id="idVidaKandiaru">❤️ Vida: 100%</h3>
+              <h3 class="luta" id="idFadigaKandiaru">🪫Fadiga : 0%</h3>
               <h3 class="luta" id="idAgilidadeKandiaru">🦵 Agilidade: 9</h3>
-              <h3 class="luta" id="idForcaKandiaru">💪 Força: 9</h3>
-              <h3 class="luta" id="idInteligenciaKandiaru">
-                🧠 Inteligência: 12
+              <h3 class="luta" id="idInteligenciaKandiaru">🧠 Inteligência: 12
               </h3>
-              <button class="botaoNovo" id="idKandiaru">
-                🚶‍♂️População: 0/1
+              <button class="botaoNovo" id="idKandiaru">⚔️ Rounds da batalha: 0/1
               </button>
               
               <br /><br />
@@ -1087,27 +877,22 @@
         <br />
       </div>
       <!-- FIM da Dangeon Dupla -->
+    </time>
+    <time id="idDIVEsconderGoblin">
 
       <!-- INÍCIO DO GOBLIN -->
-      <div class="grid-item3">
+     
+      <div class="grid-item3" >
         <h1>Goblin</h1>
 
         <div class="cards-container">
           <div class="card-1 flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img
-                  class="img1"
-                  src="https://a.storyblok.com/f/178900/1504x846/cd0829c7d4/hobgoblin-solo-leveling.jpg/m/filters:quality(95)format(webp)"
-                  alt=""
-                />
+ <img class="img1"  src="https://a.storyblok.com/f/178900/1504x846/cd0829c7d4/hobgoblin-solo-leveling.jpg/m/filters:quality(95)format(webp)"  alt=""/>
               </div>
               <div class="flip-card-back">
-                <p>
-                  Tipo: Humanoide <br />
-                  Localização: Várias Dungeons<br />
-                  Estação de Metrô de Hapjeong
-                </p>
+                <img class="img1"  src="https://i.pinimg.com/564x/df/aa/a2/dfaaa23e3b6ce516651947cf3d67f668.jpg"  alt=""/>
               </div>
             </div>
           </div>
@@ -1134,8 +919,8 @@
             <h3 class="sublinhado">Status do Goblin</h3>
 
             <fieldset class="luta">
-              <h3 class="luta" id="idVidaGoblin">❤️ Vida: -30%</h3>
-              <h3 class="luta" id="idFadigaGoblin">🪫Fadiga : +30%</h3>
+              <h3 class="luta" id="idVidaGoblin">❤️ Vida: 30%</h3>
+              <h3 class="luta" id="idFadigaGoblin">🪫Fadiga: 30%</h3>
               <h3 class="luta" id="idAgilidadeGoblin">🦵 Agilidade: 11</h3>
               <h3 class="luta" id="idForcaGoblin">💪 Força: 15</h3>
               <button class="botaoNovo" id="idexperiencia">
@@ -1170,6 +955,7 @@
       </div>
       <!-- FIM DO GOBLIN -->
 
+      </time>
       <!-- INÍCIO DO Lycan -->
       <div class="grid-item3">
         <h1>Lycan com Presas de Aço</h1>
@@ -1185,10 +971,7 @@
                 />
               </div>
               <div class="flip-card-back">
-                <p>
-                  Tipo: Besta <br />
-                  Localização: Estação de Metrô de Hapjeong<br />
-                </p>
+                <img class="img1"  src="https://i.ytimg.com/vi/LrG5gNXA4NU/maxresdefault.jpg"/>
               </div>
             </div>
           </div>
@@ -1216,8 +999,8 @@
             <h3 class="sublinhado">Status do Lycan com Presas de Aço</h3>
 
             <fieldset class="luta">
-              <h3 class="luta" id="idVidaLycan">❤️ Vida: -30%</h3>
-              <h3 class="luta" id="idFadigaLycan">🪫Fadiga : +30%</h3>
+              <h3 class="luta" id="idVidaLycan">❤️ Vida: 30%</h3>
+              <h3 class="luta" id="idFadigaLycan">🪫 Fadiga: 30%</h3>
               <h3 class="luta" id="idAgilidadeLycan">🦵 Agilidade: 40</h3>
               <h3 class="luta" id="idForcaLycan">💪 Força: 30</h3>
               <button class="botaoNovo" id="idexperienciaLycan">
@@ -1254,6 +1037,7 @@
       <!-- FIM DO Lycan -->
 
       <!-- INÍCIO DO Kasaka  -->
+      
       <div class="grid-item3">
         <h1>Kasaka Azul de Presas Venenosas</h1>
 
@@ -1268,10 +1052,7 @@
                 />
               </div>
               <div class="flip-card-back">
-                <p>
-                  Tipo: Cobra <br />
-                  Localização: Estação de Metrô de Hapjeong<br />
-                </p>
+                <img class="img1"  src="https://static.wikia.nocookie.net/solo-leveling/images/f/f0/Anime_Episode_4_JInwoo_vs_snake.webp/revision/latest?cb=20240331123812"  />
               </div>
             </div>
           </div>
@@ -1297,10 +1078,10 @@
               Status da Kasaka</h3>
 
             <fieldset class="luta">
-              <h3 class="luta" id="idVidaKasaka">❤️ Vida: -70%</h3>
-              <h3 class="luta" id="idFadigaKasaka">🪫Fadiga : +70%</h3>
-              <h3 class="luta" id="idAgilidadeKasaka">🦵 Agilidade: 50</h3>
-              <h3 class="luta" id="idForcaKasaka">💪 Força: 40</h3>
+              <h3 class="luta" id="idVidaKasaka">❤️ Vida: 70%</h3>
+              <h3 class="luta" id="idFadigaKasaka">🪫Fadiga: 70%</h3>
+              <h3 class="luta" id="idAgilidadeKasaka">🦵 Agilidade: 40</h3>
+              <h3 class="luta" id="idForcaKasaka">💪 Força: 50</h3>
               <button class="botaoNovo" id="idexperienciaKasaka">
                 🏆 Experiência: 0
               </button>
@@ -1334,6 +1115,7 @@
       <!-- FIM DO Kasaka  -->
 
       <!-- INÍCIO dos Insectoids  -->
+     
       <div class="grid-item3">
         <h1>Insectoids</h1>
 
@@ -1348,10 +1130,7 @@
                 />
               </div>
               <div class="flip-card-back">
-                <p>
-                  Tipo: Inseto <br />
-                  Localização: Dungeon dos Insetos<br />
-                </p>
+                <img class="img1"  src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/02/dong-suk-hwang-and-his-lizards-fighting-monsters-in-solo-leveling.jpg"  />
               </div>
             </div>
           </div>
@@ -1378,8 +1157,8 @@
               <h3 class="luta" id="idRequisitoInsectoids">
                 🐍 Kasaka derrotada:
               </h3>
-              <h3 class="luta" id="idVidaInsectoids">❤️ Vida: -10%</h3>
-              <h3 class="luta" id="idFadigaInsectoids">🪫Fadiga : +20%</h3>
+              <h3 class="luta" id="idVidaInsectoids">❤️ Vida: 10%</h3>
+              <h3 class="luta" id="idFadigaInsectoids">🪫Fadiga: 20%</h3>
               <h3 class="luta" id="idAgilidadeInsectoids">🦵 Agilidade: 30</h3>
               <h3 class="luta" id="idForcaInsectoids">💪 Força: 30</h3>
               <h3 class="luta" id="idPercepcaoInsectoids">👀 Percepção: 35</h3>
@@ -1414,6 +1193,7 @@
       <!-- FIM dos Insectoids -->
 
       <!-- INÍCIO da Aranha Gigante -->
+      
       <div class="grid-item3">
         <h1>Aranha Gigante</h1>
 
@@ -1428,10 +1208,7 @@
                 />
               </div>
               <div class="flip-card-back">
-                <p>
-                  Tipo: Inseto <br />
-                  Localização: Dungeon dos Insetos
-                </p>
+                <img class="img1"  src="https://a.storyblok.com/f/178900/1504x846/15bdaad3e2/giant-spider-solo-leveling.jpg/m/filters:quality(95)format(webp)"  />
               </div>
             </div>
           </div>
@@ -1454,10 +1231,10 @@ Esta aranha gigantesca é o chefe da dungeon dos insetos de Rank-C. Esta aranha 
             <h3 class="sublinhado">Status da Aranha Gigante</h3>
 
             <fieldset class="luta">
-              <h3 class="luta" id="idVidaAranha">❤️ Vida: -50%</h3>
-              <h3 class="luta" id="idFadigaAranha">🪫Fadiga : +60%</h3>
-              <h3 class="luta" id="idAgilidadeAranha">🦵 Agilidade: 79</h3>
-              <h3 class="luta" id="idForcaAranha">💪 Força: 60</h3>
+              <h3 class="luta" id="idVidaAranha">❤️ Vida: 50%</h3>
+              <h3 class="luta" id="idFadigaAranha">🪫Fadiga: 60%</h3>
+              <h3 class="luta" id="idAgilidadeAranha">🦵 Agilidade: 60</h3>
+              <h3 class="luta" id="idForcaAranha">💪 Força: 79</h3>
               <button class="botaoNovo" id="idexperienciaAranha">
                 🏆 Experiência: 0
               </button>
@@ -1491,6 +1268,7 @@ Esta aranha gigantesca é o chefe da dungeon dos insetos de Rank-C. Esta aranha 
       <!-- FIM da Aranha Gigante -->
 
       <!--  INÍCIO dos Caçadores -->
+      
       <div class="grid-item3">
         <h1>Grupo de Caçadores</h1>
 
@@ -1505,10 +1283,7 @@ Esta aranha gigantesca é o chefe da dungeon dos insetos de Rank-C. Esta aranha 
                 />
               </div>
               <div class="flip-card-back">
-                <p>
-                  Tipo: Humanos <br />
-                  Localização: Dungeon dos Insetos
-                </p>
+                <img class="img1"  src="https://zumaki.co.in/wp-content/uploads/2024/02/Hwang-Dongsuk-1024x576.webp"  />
               </div>
             </div>
           </div>
@@ -1535,13 +1310,11 @@ Esta aranha gigantesca é o chefe da dungeon dos insetos de Rank-C. Esta aranha 
             <h3 class="sublinhado">Status do Grupo de caçadores</h3>
 
             <fieldset class="luta">
-              <h3 class="luta" id="idVidaCacadores">❤️ Vida: -5%</h3>
-              <h3 class="luta" id="idFadigaCacadores">🪫Fadiga : +5%</h3>
-              <h3 class="luta" id="idAgilidadeCacadores">🦵 Agilidade: 80</h3>
-              <h3 class="luta" id="idForcaCacadores">💪 Força: 60</h3>
-              <h3 class="luta" id="idInteligenciaCacadores">
-                🧠 Inteligência: 35
-              </h3>
+              <h3 class="luta" id="idVidaCacadores">❤️ Vida: 5%</h3>
+              <h3 class="luta" id="idFadigaCacadores">🪫Fadiga: 5%</h3>
+              <h3 class="luta" id="idAgilidadeCacadores">🦵 Agilidade: 60</h3>
+              <h3 class="luta" id="idForcaCacadores">💪 Força: 80</h3>
+              <h3 class="luta" id="idInteligenciaCacadores">🧠 Inteligência: 35</h3>
               <h3 class="luta" id="idPercepcaoCacadores">👀 Percepção: 39</h3>
 
               <button class="botaoNovo" id="idexperienciaCacadores">
@@ -1576,6 +1349,7 @@ Esta aranha gigantesca é o chefe da dungeon dos insetos de Rank-C. Esta aranha 
       <!--FIM dos Caçadores-->
 
       <!--  INÍCIO  do Cerberus, Guardião do Inferno-->
+      
       <div class="grid-item3">
         <h1>Cerberus Guardião do Inferno</h1>
 
@@ -1590,10 +1364,7 @@ Esta aranha gigantesca é o chefe da dungeon dos insetos de Rank-C. Esta aranha 
                 />
               </div>
               <div class="flip-card-back">
-                <p>
-                  Tipo: Besta <br />
-                  Localização: Castelo Demoníaco
-                </p>
+                <img class="img1"  src="https://image.idntimes.com/post/20240218/untitled-2-1f6211f9ec3e4176109c16c0975cfa5b.jpg"  />
               </div>
             </div>
           </div>
@@ -1616,10 +1387,10 @@ Esta aranha gigantesca é o chefe da dungeon dos insetos de Rank-C. Esta aranha 
             <h3 class="sublinhado">Status do Cerberus</h3>
 
             <fieldset class="luta">
-              <h3 class="luta" id="idVidaCerberus">❤️ Vida: -100%</h3>
-              <h3 class="luta" id="idFadigaCerberus">🪫Fadiga : +100%</h3>
-              <h3 class="luta" id="idAgilidadeCerberus">🦵 Agilidade: 90</h3>
-              <h3 class="luta" id="idForcaCerberus">💪 Força: 75</h3>
+              <h3 class="luta" id="idVidaCerberus">❤️ Vida: 100%</h3>
+              <h3 class="luta" id="idFadigaCerberus">🪫Fadiga: 100%</h3>
+              <h3 class="luta" id="idAgilidadeCerberus">🦵 Agilidade: 75</h3>
+              <h3 class="luta" id="idForcaCerberus">💪 Força: 90</h3>
               <h3 class="luta" id="idPercepcaoCerberus">👀 Percepção: 50</h3>
 
               <button class="botaoNovo" id="idexperienciaCerberus">
@@ -1654,6 +1425,7 @@ Esta aranha gigantesca é o chefe da dungeon dos insetos de Rank-C. Esta aranha 
       </div>
 
       <!--  INÍCIO  do Mr. Kang-->
+    
       <div class="grid-item3">
         <h1>Mr. Kang</h1>
 
@@ -1668,10 +1440,7 @@ Esta aranha gigantesca é o chefe da dungeon dos insetos de Rank-C. Esta aranha 
                 />
               </div>
               <div class="flip-card-back">
-                <p>
-                  Tipo: Humano <br />
-                  Localização: Dangeon dos Goblins
-                </p>
+                <img class="img1"  src="https://s.yimg.com/ny/api/res/1.2/QSsRTRVpWzXdMlp_tkZhjw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTU0MA--/https://media.zenfs.com/en/comingsoon_net_477/176cda2e8af79cab7a857bcbbb839625"  />
               </div>
             </div>
           </div>
@@ -1679,7 +1448,7 @@ Esta aranha gigantesca é o chefe da dungeon dos insetos de Rank-C. Esta aranha 
 
         <h3>Dangeon: Dangeon dos Goblins</h3>
         <h3>Rank: B ⭐⭐</h3>
-        <button style="humano" >Humano</button>
+        <button>Humano</button>
         <button class="AtaqueFisico">Ataque físico</button>
 
         <br /><br />
@@ -1698,10 +1467,10 @@ Esta aranha gigantesca é o chefe da dungeon dos insetos de Rank-C. Esta aranha 
               <h3 class="luta" id="idDerrotouOCerberus">
                 🔥Cerberus derrotado:
               </h3>
-              <h3 class="luta" id="idVidaKang">❤️ Vida: -50%</h3>
-              <h3 class="luta" id="idFadigaKang">🪫Fadiga : +30%</h3>
-              <h3 class="luta" id="idAgilidadeKang">🦵 Agilidade: 95</h3>
-              <h3 class="luta" id="idForcaKang">💪 Força: 85</h3>
+              <h3 class="luta" id="idVidaKang">❤️ Vida: 50%</h3>
+              <h3 class="luta" id="idFadigaKang">🪫Fadiga: 30%</h3>
+              <h3 class="luta" id="idAgilidadeKang">🦵 Agilidade: 85</h3>
+              <h3 class="luta" id="idForcaKang">💪 Força: 95</h3>
               <h3 class="luta" id="idPercepcaoKang">👀 Percepção: 60</h3>
 
               <button class="botaoNovo" id="idexperienciaKang">
@@ -1748,7 +1517,7 @@ Esta aranha gigantesca é o chefe da dungeon dos insetos de Rank-C. Esta aranha 
                 />
               </div>
               <div class="flip-card-back">
-                <p>Tipo: Humano <br /></p>
+                <img class="img1"  src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/03/jin-ho-yoo-in-armor-in-solo-leveling-episode-10.jpg"  />
               </div>
             </div>
           </div>
@@ -1756,7 +1525,7 @@ Esta aranha gigantesca é o chefe da dungeon dos insetos de Rank-C. Esta aranha 
 
         <h3>Dangeon: Misão especial para subir de nível</h3>
         <h3>Rank: D ⭐⭐⭐</h3>
-        <button style="humano">Humano</button>
+        <button>Humano</button>
         <button class="AtaqueFisico">Ataque físico</button>
 
         <br /><br />
@@ -1774,10 +1543,10 @@ Esta aranha gigantesca é o chefe da dungeon dos insetos de Rank-C. Esta aranha 
             <h3 class="sublinhado">Status dos Mostros das Masmoras</h3>
 
             <fieldset class="luta">
-              <h3 class="luta" id="idVidaYoo">❤️ Vida: -50%</h3>
-              <h3 class="luta" id="idFadigaYoo">🪫Fadiga : +50%</h3>
-              <h3 class="luta" id="idAgilidadeYoo">🦵 Agilidade: 95</h3>
-              <h3 class="luta" id="idForcaYoo">💪 Força: 85</h3>
+              <h3 class="luta" id="idVidaYoo">❤️ Vida: 50%</h3>
+              <h3 class="luta" id="idFadigaYoo">🪫Fadiga: 50%</h3>
+              <h3 class="luta" id="idAgilidadeYoo">🦵 Agilidade: 85</h3>
+              <h3 class="luta" id="idForcaYoo">💪 Força: 95</h3>
               <h3 class="luta" id="idPercepcaoYoo">👀 Percepção: 65</h3>
 
               <button class="botaoNovo" id="idexperienciaYoo">
@@ -1823,10 +1592,7 @@ Esta aranha gigantesca é o chefe da dungeon dos insetos de Rank-C. Esta aranha 
                 />
               </div>
               <div class="flip-card-back">
-                <p>
-                  Tipo: Humanoide <br />
-                  Localização: Dungeon de Troca de Classe
-                </p>
+                <img class="img1"  src="https://i.ytimg.com/vi/TtQkOgeyURI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDwAS7o-NKTm2cgXRsC1panWEDtwQ"  />
               </div>
             </div>
           </div>
@@ -1852,10 +1618,10 @@ Esta aranha gigantesca é o chefe da dungeon dos insetos de Rank-C. Esta aranha 
             <h3 class="sublinhado">Status do Igris</h3>
 
             <fieldset class="luta">
-              <h3 class="luta" id="idVidaIgris">❤️ Vida: -100%</h3>
-              <h3 class="luta" id="idFadigaIgris">🪫Fadiga : +100%</h3>
-              <h3 class="luta" id="idAgilidadeIgris">🦵 Agilidade: 100</h3>
-              <h3 class="luta" id="idForcaIgris">💪 Força: 120</h3>
+              <h3 class="luta" id="idVidaIgris">❤️ Vida: 100%</h3>
+              <h3 class="luta" id="idFadigaIgris">🪫Fadiga: 100%</h3>
+              <h3 class="luta" id="idAgilidadeIgris">🦵 Agilidade: 120</h3>
+              <h3 class="luta" id="idForcaIgris">💪 Força: 100</h3>
               <h3 class="luta" id="idPercepcaoIgris">👀 Percepção: 80</h3>
               <h3 class="luta" id="idInteligenciaIgris">🧠 Inteligência: 60</h3>
 
@@ -1902,10 +1668,7 @@ Esta aranha gigantesca é o chefe da dungeon dos insetos de Rank-C. Esta aranha 
                 />
               </div>
               <div class="flip-card-back">
-                <p>
-                  Tipo: Humanoide <br />
-                  Localização: Dungeon de Troca de Classe
-                </p>
+                <img class="img1"  src="https://a.storyblok.com/f/178900/1504x846/42b7f8e482/archer-solo-leveling.jpg/m/filters:quality(95)format(webp)"  />
               </div>
             </div>
           </div>
@@ -1931,8 +1694,8 @@ Esta aranha gigantesca é o chefe da dungeon dos insetos de Rank-C. Esta aranha 
             <fieldset class="luta">
               <h3 class="luta" id="idVidaMagos">❤️ Vida: -100%</h3>
               <h3 class="luta" id="idFadigaMagos">🪫Fadiga : +100%</h3>
-              <h3 class="luta" id="idAgilidadeMagos">🦵 Agilidade: 145</h3>
-              <h3 class="luta" id="idForcaMagos">💪 Força: 140</h3>
+              <h3 class="luta" id="idAgilidadeMagos">🦵 Agilidade: 140</h3>
+              <h3 class="luta" id="idForcaMagos">💪 Força: 145</h3>
               <h3 class="luta" id="idPercepcaoMagos">👀 Percepção: 85</h3>
               <h3 class="luta" id="idInteligenciaMagos">🧠 Inteligência: 65</h3>
 
@@ -1961,30 +1724,81 @@ Esta aranha gigantesca é o chefe da dungeon dos insetos de Rank-C. Esta aranha 
       </div>
       <!--FIM dos Magos-->
 
+      <!--INÍCIO DO banner final-->
+      <div class="grid-item4"></div>
+      <!-- FIM DO banner final  -->
+
        <!--Início da da habilidade Extração de Sombra -->
        <div class="grid-item7">
         <br />
-        <img
-          class="pipoca"
-          src="https://i.scdn.co/image/ab67616d00001e021d2529155c665c44f457e170"
-        />
 
         <h1>Arise from the Shadow</h1>
         <h3>
-Através de batalhas implacáveis, Jinwoo aprimorou suas habilidades e, eventualmente, completou uma " Missão de Troca de Classe ",
+Através de batalhas implacáveis, Jinwoo aprimorou suas habilidades e eventualmente completou uma " Missão de Troca de Classe ",
  adquirindo o título de "Monarca das Sombras", que lhe permite comandar um exército de soldados das sombras. 
  Agora, movido pela esperança de curar sua mãe doente, Jinwoo parte em uma nova jornada para obter materiais para o "Elixir da Vida".
         </h3>
         <br /><br />
+<!--Início da habilidade Extração de Sombras-->
+<details>
+  <summary class="sumario" id="idCheckExtracao">
+    ⛔ Habilidade: Extração de Sombra
+  </summary>
+  <br />
+  <img
+    class="imgMenor"
+    src="https://animeflix.com.br/wp-content/uploads/2025/02/solo-leveling-monarca-das-sombras-696x392.jpg"
+  />
+  <br />
 
+  <h4 class="sublinhado">
+    <br />[Habilidade exclusiva da classe Monarca das Sombras] <br /><br />
+   Extrai mana de um corpo cuja a vida chegou ao fim e a transforma em  um soldado das Sombras.
+    <br />
+    <br />
+  </h4>
+
+<fieldset class="sublinhado">
+<h3 >[Igris Nível 7]<br>Rank Cavaleiro</h3> 
+<br>
+<img class="img1" src="https://i.ytimg.com/vi/WouuRxJi_tg/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCkpfPUlmpzp4lsoZiYBOvidaAT3w"/>
+<br><br>
+<h3 class="luta">🦵 Agilidade: 100 <br> 💪 Força: 120 <br> 👀 Percepção: 80 <br> 🧠 Inteligência: 60</h3>
+<h3 >Necessário 20 Pontos de Mana</h3>
+<button class="botaoNovo" onclick="FuncaoExtracao1()"> Erga-se </button>
+
+  <h4 id="idRetornoExtracao1"></h4>
+</fieldset>
+
+<fieldset class="sublinhado">
+<h3 >[Magos das Sombras Nível 1]<br> Rank Normal</h3>
+<br>
+<img class="img1" src="https://preview.redd.it/4hwzwdio9tce1.png?auto=webp&s=a2bc4f454e79e7d5c532a4f2fb8c0a3eb7c4cfa6"/>
+<br><br>
+<h3 class="luta">🦵 Agilidade: 145 <br> 💪 Força: 140 <br> 👀 Percepção: 85 <br> 🧠 Inteligência: 65</h3>
+
+<h3 >Necessário 10 Pontos de Mana</h3>
+<button class="botaoNovo" onclick="FuncaoExtracao2()"> Erga-se </button>
+
+  <h4 id="idRetornoExtracao2"></h4>
+
+  
+<br />
+</fieldset>
+<br />
+<iframe width="320" height="200" src="https://www.youtube.com/embed/CRZsOOOvg1I?si=knBLpsxTc8Tw4f-y&autoplay=1&mute=1&loop=1&playlist=CRZsOOOvg1I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<br>
+
+</details>
+<br />
+<!-- Fim da habilidade da Extração de Sombras -->
 
 
       </div>
       <!-- Fim da habilidade Extração de Sombra -->
 
-      <!--INÍCIO DO banner final-->
-      <div class="grid-item4"></div>
-      <!-- FIM DO banner final  -->
+      
     </div>
     <!-- FIM DO GRIDE -->
 
